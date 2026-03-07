@@ -18,6 +18,10 @@ def RHC(start_point, z, p, seed=67):
         distr = np.random.uniform(-z, z, size=start_point.shape)
         neighbor = start_point + distr
 
+        # Clamp neighbor to bounds
+        # .clip() works by setting values smaller than -512 to -512 and values larger than 512 to 512
+        neighbor = np.clip(neighbor, -512, 512)
+
         eval_neighbor = eval_neighbor(neighbor)
         eval_amt += 1
 
@@ -38,5 +42,4 @@ def eval_neighbor(neighbor):
         # Evaluate frog at neighbor position
         return frog(neighbor)
     else:
-        # Clamp or maybe Discard
         return None
