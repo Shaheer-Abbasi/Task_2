@@ -7,9 +7,9 @@ $$f_{Frog}(x,y) = x \cdot \cos(\sqrt{|x+y+1|}) \cdot \sin(\sqrt{|y-x+1|}) + (1+y
 ---
 ## Files
 
-frog.py -- Contains ``fFrog(x, y)`` function
-rhc.py -- Defined RHC and RHCR2 resampling functions
-main.py -- Runs the experiments and generates CSV files summarizing the results
+- frog.py -- Contains ``fFrog(x, y)`` function 
+- rhc.py -- Defined RHC and RHCR2 resampling functions 
+- main.py -- Runs the experiments and generates CSV files summarizing the results
 
 ---
 
